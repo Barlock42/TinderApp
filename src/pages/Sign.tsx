@@ -1,7 +1,7 @@
 import React from "react";
 
 const Sign = () => {
-  const authToken = false;
+  const authToken = true;
 
   const handleClick = () => {
     console.log("clicked");
@@ -10,7 +10,7 @@ const Sign = () => {
   return (
     <div className="home">
       <h1> Swipe Right®</h1>
-      <button className="primary-button" onClick={handleClick }>
+      <button className="primary-button" onClick={handleClick}>
         {authToken ? "SignOut" : "SignUp"}
       </button>
     </div>

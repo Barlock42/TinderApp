@@ -1,12 +1,14 @@
 import React from "react";
 import { useState } from "react";
+import AuthModal from "../components/AuthModal";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
-  const authToken = true;
+  const authToken = false;
 
   const handleClick = () => {
     console.log("clicked");
+    setShowModal(true);
   };
 
   return (
@@ -23,7 +25,9 @@ const Home = () => {
           </h1>
           <button className="primary-button" onClick={handleClick}>
             {authToken ? "Sign out" : "Sign up"}
-          </button>
+          </button> 
+
+          {showModal && (<AuthModal setShowModal={setShowModal}/>)}
         </div>
       </div>
     </div>

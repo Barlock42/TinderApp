@@ -2,10 +2,10 @@ import Home from "./pages/Home.tsx";
 import Sign from "./pages/Sign.tsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
-
+//
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter> 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/sign" element={<Sign />} />
